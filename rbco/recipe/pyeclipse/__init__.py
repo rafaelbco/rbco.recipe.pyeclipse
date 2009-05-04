@@ -12,10 +12,14 @@ import re
 BeautifulSoup.SELF_CLOSING_TAGS = {}
 
 def format_tag(match):
-    return '<%(tag)s>%(content)s</%(tag)s>' % match.groupdict()
+    args = dict(match.groupdict())    
+    if args['attributes']:
+        args['attributes'] = ' ' + args['attributes']        
+    
+    return '<%(tag)s%(attributes)s>%(content)s</%(tag)s>' % args
     
 def format_xml(xml):
-    pattern = r'<(?P<tag>\S+)>\s*(?P<content>[A-z0-9/_\-\.]+)\s*</(?P=tag)>'
+    pattern = r'<(?P<tag>\S+)\s*(?P<attributes>.*)>\s*(?P<content>.*)\s*</(?P=tag)>'
     return re.sub(pattern, format_tag, xml)
 
 
