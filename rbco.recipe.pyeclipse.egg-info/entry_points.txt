@@ -1,0 +1,3 @@
+[zc.buildout]
+default = rbco.recipe.pyeclipse:Recipe
+

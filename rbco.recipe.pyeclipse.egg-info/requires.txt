@@ -1,0 +1,7 @@
+setuptools
+zc.buildout
+BeautifulSoup>=3.0.7a,<=3.0.7z
+
+[tests]
+zope.testing
+zc.buildout
