@@ -114,8 +114,7 @@ The project directory is created if it does not exist and so happens to the
      <buildspec>
       <buildcommand>
        <name>org.python.pydev.PyDevBuilder</name>
-       <arguments>
-       </arguments>
+       ...
       </buildcommand>
      </buildspec>
      <natures>
