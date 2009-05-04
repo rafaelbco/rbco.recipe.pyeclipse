@@ -10,3 +10,11 @@ Changelog
 -------------------	
 
 - Corrected XML formatting.
+
+0.0.3 (04-may-2009)
+-------------------	
+
+- Corrected XML formatting again, fixing the Python Version Bug.
+- Improved documentation.
+
+

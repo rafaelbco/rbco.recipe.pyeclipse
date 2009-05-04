@@ -1,6 +1,6 @@
 Metadata-Version: 1.0
 Name: rbco.recipe.pyeclipse
-Version: 0.0.2
+Version: 0.0.3
 Summary: Creates a Pydev project for Eclipse.
 Home-page: http://rbco-recipe-pyeclipse.googlecode.com/
 Author: Rafael Oliveira
@@ -32,6 +32,9 @@ Description: rbco.recipe.pyeclipse
         __ `Eclipse, PyDev and Buildout`_
         
         However it should be flexible enough to allow other strategies.
+        
+        After the recipe is run import the project into Eclipse going to:
+        File -> Import... -> Existing projects into workspace.
         
         
         Supported options
@@ -122,8 +125,7 @@ Description: rbco.recipe.pyeclipse
         <buildspec>
         <buildcommand>
         <name>org.python.pydev.PyDevBuilder</name>
-        <arguments>
-        </arguments>
+        ...
         </buildcommand>
         </buildspec>
         <natures>
@@ -159,6 +161,25 @@ Description: rbco.recipe.pyeclipse
         </link>...
         </linkedResources>...
         
+        Known bugs and caveats
+        ----------------------
+        
+        - If you get an error message saying, in the details, that
+        **Files cannot be linked to folders** then try to rebuild your buildout
+        running: ``bin/buildout -Nov``.
+        
+        This is happening probably because the pyeclipse recipe ran before a directory
+        referred in the recipe's configuration was created. This often happens when
+        using omelettes.
+        
+        - If auto-complete is not working for your project try checking if the Python
+        version is set up correctly. Check inside project's properties ->
+        "Pydev -> project type" -> "Grammar Version".
+        
+        The Python version can be configured using the ``python-version`` option of
+        the recipe.
+        
+        
         References
         ----------
         
@@ -180,6 +201,14 @@ Description: rbco.recipe.pyeclipse
         -------------------
         
         - Corrected XML formatting.
+        
+        0.0.3 (04-may-2009)
+        -------------------
+        
+        - Corrected XML formatting again, fixing the Python Version Bug.
+        - Improved documentation.
+        
+        
         
         TODO
         ====

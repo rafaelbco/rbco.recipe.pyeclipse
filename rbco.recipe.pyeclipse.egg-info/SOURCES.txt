@@ -24,3 +24,9 @@ rbco/recipe/pyeclipse/fileutil.py
 rbco/recipe/pyeclipse/pydevproj.py
 rbco/recipe/pyeclipse/tests/__init__.py
 rbco/recipe/pyeclipse/tests/test_docs.py
+sample_buildout/bootstrap.py
+sample_buildout/buildout.cfg
+sample_buildout/fresh.sh
+sample_buildout/make_clean.sh
+sample_buildout/src/mypackage/__init__.py
+sample_buildout/src/mypackage/foo.py
