@@ -1,6 +1,6 @@
 Metadata-Version: 1.0
 Name: rbco.recipe.pyeclipse
-Version: 0.0.3
+Version: 0.0.4
 Summary: Creates a Pydev project for Eclipse.
 Home-page: http://rbco-recipe-pyeclipse.googlecode.com/
 Author: Rafael Oliveira
