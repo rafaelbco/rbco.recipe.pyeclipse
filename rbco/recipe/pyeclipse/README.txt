@@ -25,6 +25,9 @@ __ `Eclipse, PyDev and Buildout`_
 
 However it should be flexible enough to allow other strategies.
 
+After the recipe is run import the project into Eclipse going to: 
+File -> Import... -> Existing projects into workspace.
+
 
 Supported options
 -----------------
@@ -148,7 +151,26 @@ The egg zip file is present too::
         ...testdir/some.egg.zip</location>      
         <type>1</type>
       </link>...      
-    </linkedResources>...
+    </linkedResources>...       
+    
+Known bugs and caveats
+----------------------
+
+- If you get an error message saying, in the details, that 
+  **Files cannot be linked to folders** then try to rebuild your buildout 
+  running: ``bin/buildout -Nov``. 
+  
+  This is happening probably because the pyeclipse recipe ran before a directory 
+  referred in the recipe's configuration was created. This often happens when
+  using omelettes.
+  
+- If auto-complete is not working for your project try checking if the Python
+  version is set up correctly. Check inside project's properties -> 
+  "Pydev -> project type" -> "Grammar Version". 
+  
+  The Python version can be configured using the ``python-version`` option of
+  the recipe.
+  
     
 References
 ----------
