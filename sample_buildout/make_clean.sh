@@ -12,4 +12,4 @@ then
 fi
 
 cd $BUILDOUT_DIR
-rm -rf develop-eggs *.tmp eggs bin var parts downloads .installed.cfg fake-eggs
+rm -rf develop-eggs *.tmp eggs var parts downloads .installed.cfg fake-eggs bin
