@@ -19,6 +19,19 @@ def format_tag(match):
     return '<%(tag)s%(attributes)s>%(content)s</%(tag)s>' % args
     
 def format_xml(xml):
+    """Format XML for output.
+    
+    We need to remove extra spaces and newlines in order to Eclipse get it
+    right. Eg.: 
+    <tag>value</tag> 
+    
+    is different from 
+    
+    <tag>
+        value
+    </value>        
+    """
+
     pattern = r'<(?P<tag>\S+)\s*(?P<attributes>.*)>\s*(?P<content>.*)\s*</(?P=tag)>'
     return re.sub(pattern, format_tag, xml)
 
