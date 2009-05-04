@@ -1,8 +1,8 @@
 Metadata-Version: 1.0
 Name: rbco.recipe.pyeclipse
 Version: 0.0.1
-Summary: Generates an Eclipse Pydev configuration with a working PYTHONPATH.
-Home-page: UNKNOWN
+Summary: Creates a Pydev project for Eclipse.
+Home-page: http://rbco-recipe-pyeclipse.googlecode.com/
 Author: Rafael Oliveira
 Author-email: rafaelbco@gmail.com
 License: GPL
@@ -174,19 +174,24 @@ Description: rbco.recipe.pyeclipse
         
         .. target-notes::
         
-        Contributors
-        ============
-        
-        - Rafael Oliveira, Author
-        
-        
-        Change history
-        ==============
+        Changelog
+        =========
         
         0.0.1 (04-may-2009)
         ------------------
         
         - First release.
+        
+        TODO
+        ====
+        
+        - Write more tests, including the optional options.
+        
+        Contributors
+        ============
+        
+        - Rafael Oliveira, Author
+        
         
 Keywords: eclipse pydev
 Platform: UNKNOWN

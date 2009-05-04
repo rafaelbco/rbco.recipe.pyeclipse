@@ -1,6 +1,7 @@
 CHANGES.txt
 CONTRIBUTORS.txt
 README.txt
+TODO.txt
 __init__.py
 setup.cfg
 setup.py
