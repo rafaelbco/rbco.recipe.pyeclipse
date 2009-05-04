@@ -5,3 +5,8 @@ Changelog
 -------------------
 
 - First release.
+
+0.0.2 (04-may-2009)
+-------------------	
+
+- Corrected XML formatting.
