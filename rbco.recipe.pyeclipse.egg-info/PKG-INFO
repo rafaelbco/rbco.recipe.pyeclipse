@@ -1,6 +1,6 @@
 Metadata-Version: 1.0
 Name: rbco.recipe.pyeclipse
-Version: 0.0.1
+Version: 0.0.2
 Summary: Creates a Pydev project for Eclipse.
 Home-page: http://rbco-recipe-pyeclipse.googlecode.com/
 Author: Rafael Oliveira
@@ -117,23 +117,17 @@ Description: rbco.recipe.pyeclipse
         >>> cat(join(sample_buildout, 'testproject', '.project'))
         <?xml version='1.0' encoding='utf-8'?>
         <projectDescription>
-        <name>
-        TestProject
-        </name>
+        <name>TestProject</name>
         ...
         <buildspec>
         <buildcommand>
-        <name>
-        org.python.pydev.PyDevBuilder
-        </name>
+        <name>org.python.pydev.PyDevBuilder</name>
         <arguments>
         </arguments>
         </buildcommand>
         </buildspec>
         <natures>
-        <nature>
-        org.python.pydev.pythonNature
-        </nature>
+        <nature>org.python.pydev.pythonNature</nature>
         </natures>
         <linkedResources>
         ...
@@ -147,9 +141,9 @@ Description: rbco.recipe.pyeclipse
         <?xml...
         <linkedResources>...
         <link>
-        <name>...my.python.package...</name>
-        <location>...testdir/my.python.package...</location>
-        <type>... 2 ...</type>
+        <name>my.python.package</name>
+        ...testdir/my.python.package</location>
+        <type>2</type>
         </link>...
         </linkedResources>...
         
@@ -159,9 +153,9 @@ Description: rbco.recipe.pyeclipse
         <?xml...
         <linkedResources>...
         <link>
-        <name>...some.egg.zip...</name>
-        <location>...testdir/some.egg.zip...</location>
-        <type>... 1 ...</type>
+        <name>some.egg.zip</name>
+        ...testdir/some.egg.zip</location>
+        <type>1</type>
         </link>...
         </linkedResources>...
         
