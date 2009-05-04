@@ -5,10 +5,18 @@ from fileutil import create_dir_if_not_exist, create_file_if_not_exist
 import eclipseproj
 import pydevproj
 from BeautifulSoup import BeautifulSoup
+import re
 
 # Do not generate link tags as <link /> ... In fact we're not dealing with HTML,
 # we are using XML.
 BeautifulSoup.SELF_CLOSING_TAGS = {}
+
+def format_tag(match):
+    return '<%(tag)s>%(content)s</%(tag)s>' % match.groupdict()
+    
+def format_xml(xml):
+    pattern = r'<(?P<tag>\S+)>\s*(?P<content>[A-z0-9/_\-\.]+)\s*</(?P=tag)>'
+    return re.sub(pattern, format_tag, xml)
 
 
 def modify_xml(filename, modifier):
@@ -21,7 +29,7 @@ def modify_xml(filename, modifier):
     f.close()
         
     modifier(soup)
-    xml = soup.prettify()
+    xml = format_xml(soup.prettify())
     xml = (xml
         .replace('projectdescription', 'projectDescription')
         .replace('linkedresources', 'linkedResources')
@@ -104,7 +112,7 @@ class Recipe(object):
             self.setup_eclipse_project,
             DEFAULT_DOT_PROJECT_XML
         )        
-
+        
         create_or_modify_xml(
             self.dot_pydevproject_path, 
             self.setup_pydev_project,

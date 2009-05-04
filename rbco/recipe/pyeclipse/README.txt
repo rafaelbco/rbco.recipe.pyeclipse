@@ -109,23 +109,17 @@ The project directory is created if it does not exist and so happens to the
     >>> cat(join(sample_buildout, 'testproject', '.project'))
     <?xml version='1.0' encoding='utf-8'?>
     <projectDescription>
-     <name>
-      TestProject
-     </name>
+     <name>TestProject</name>
      ...
      <buildspec>
       <buildcommand>
-       <name>
-        org.python.pydev.PyDevBuilder
-       </name>
+       <name>org.python.pydev.PyDevBuilder</name>
        <arguments>
        </arguments>
       </buildcommand>
      </buildspec>
      <natures>
-      <nature>
-       org.python.pydev.pythonNature
-      </nature>
+      <nature>org.python.pydev.pythonNature</nature>
      </natures>
      <linkedResources>
      ...
@@ -139,9 +133,9 @@ Let's look into the ``<linkedResources>`` tag. The paths listed in the
     <?xml...
     <linkedResources>...
       <link>
-        <name>...my.python.package...</name>
-        <location>...testdir/my.python.package...</location>      
-        <type>... 2 ...</type>
+        <name>my.python.package</name>
+        ...testdir/my.python.package</location>
+        <type>2</type>
       </link>...      
     </linkedResources>...
     
@@ -151,9 +145,9 @@ The egg zip file is present too::
     <?xml...
     <linkedResources>...
       <link>
-        <name>...some.egg.zip...</name>
-        <location>...testdir/some.egg.zip...</location>      
-        <type>... 1 ...</type>
+        <name>some.egg.zip</name>
+        ...testdir/some.egg.zip</location>      
+        <type>1</type>
       </link>...      
     </linkedResources>...
     
