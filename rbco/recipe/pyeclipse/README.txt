@@ -9,13 +9,13 @@ Overview
 This recipe creates a Pydev_ project for Eclipse. The goal is to automate
 the following strategy:
 
-1. Create a Pydev project. The project directory is separated from the
+1. *Create a Pydev project.* The project directory is separated from the
    source code directories. In other words, the source code will not reside
    inside the project directory.
-2. Create links to the source code directories. This is done by right-clicking 
+2. *Create links to the source code directories.* This is done by right-clicking 
    the project in the Pydev Package Explorer and selection New->Folder. Then
    click Advanced and choose "Link to folder in the filesystem."
-3. Add the linked directories to the PYTHONPATH of the project.   
+3. *Add the linked directories to the PYTHONPATH of the project.*
 
 This approach works very well when working with Zope/Plone, specially if
 combined with `collective.recipe.omelette`_, as pointed in `this article`__
@@ -38,7 +38,7 @@ project-name
     The project name.
 
 python-version
-    The Python version for syntatical analysis, sucha as 2.4 or 2.5.
+    The Python version for syntatical analysis, such as 2.4 or 2.5.
     
 python-interpreter
     Optional. The path to the Python interpreter. Defaults to the default
