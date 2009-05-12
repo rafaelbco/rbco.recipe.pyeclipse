@@ -17,4 +17,8 @@ Changelog
 - Corrected XML formatting again, fixing the Python Version Bug.
 - Improved documentation.
 
+0.0.4 (12-may-2009)
+-------------------	
+
+- Improved section "Known bugs, caveats ant tips" of README.txt.
 
