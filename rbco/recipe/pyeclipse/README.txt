@@ -153,8 +153,8 @@ The egg zip file is present too::
       </link>...      
     </linkedResources>...       
     
-Known bugs and caveats
-----------------------
+Known bugs, caveats ant tips
+----------------------------
 
 - If you get an error message saying, in the details, that 
   **Files cannot be linked to folders** then try to rebuild your buildout 
@@ -164,12 +164,31 @@ Known bugs and caveats
   referred in the recipe's configuration was created. This often happens when
   using omelettes.
   
-- If auto-complete is not working for your project try checking if the Python
-  version is set up correctly. Check inside project's properties -> 
-  "Pydev -> project type" -> "Grammar Version". 
+  Then you'll probably need to rebuild your project in Eclipse. See the next
+  items.
   
-  The Python version can be configured using the ``python-version`` option of
-  the recipe.
+- If Pydev stopped analyzing or doing auto-complete on your code:
+
+    - Try to fix any syntax errors on your project. It seems Pydev stops
+      processing your files when any syntax error is found.
+      
+    - Check if all directories in the PYTHONPATH have a ``__init__.py``
+      file inside, including the root directory.
+    
+    - Check if the Python version is set up correctly. Check inside Project ->
+      Properties -> "Pydev - project type" -> "Grammar Version". 
+      
+      The Python version can be configured using the ``python-version`` option 
+      of the recipe.
+      
+- After fixing the errors above, if Pydev is still not working correctly then
+  try to rebuild your project. Do the following:
+  
+    - Check if "Project -> Build Automatically" is on. Then go to 
+      "Project -> Clean" and clean your project. The project will be rebuilt.
+  
+    - Go to "Project -> Properties -> Pydev - PYTHONPATH" and click on
+      "Force restore internal info".  
   
     
 References
