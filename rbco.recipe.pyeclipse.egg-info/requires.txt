@@ -1,6 +1,6 @@
 setuptools
 zc.buildout
-BeautifulSoup>=3.0.7a,<=3.0.7z
+BeautifulSoup>=3.0.7a,<=3.2
 
 [tests]
 zope.testing

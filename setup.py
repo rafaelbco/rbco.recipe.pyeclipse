@@ -5,7 +5,7 @@ from setuptools import setup, find_packages
 def read(*rnames):
     return open(os.path.join(os.path.dirname(__file__), *rnames)).read()
 
-version = '0.0.4'
+version = '0.0.5'
 
 long_description = (    
     read('rbco', 'recipe', 'pyeclipse', 'README.txt')
@@ -41,7 +41,7 @@ setup(name='rbco.recipe.pyeclipse',
       zip_safe=False,
       install_requires=['setuptools',
                         'zc.buildout',
-                        'BeautifulSoup>=3.0.7a,<=3.0.7z',
+                        'BeautifulSoup>=3.0.7a,<=3.2',
                         ],
       tests_require=tests_require,
       extras_require=dict(tests=tests_require),

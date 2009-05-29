@@ -1,15 +1,16 @@
 Changelog
 =========
 
-0.0.1 (04-may-2009)
+0.0.5 (29-may-2009)
 -------------------
 
-- First release.
+- Made version requirements on BeautifulSoup less strict in order to use the
+  recipe in a project involving scrapy.
 
-0.0.2 (04-may-2009)
+0.0.4 (12-may-2009)
 -------------------	
 
-- Corrected XML formatting.
+- Improved section "Known bugs, caveats ant tips" of README.txt.
 
 0.0.3 (04-may-2009)
 -------------------	
@@ -17,8 +18,12 @@ Changelog
 - Corrected XML formatting again, fixing the Python Version Bug.
 - Improved documentation.
 
-0.0.4 (12-may-2009)
+0.0.2 (04-may-2009)
 -------------------	
 
-- Improved section "Known bugs, caveats ant tips" of README.txt.
+- Corrected XML formatting.
 
+0.0.1 (04-may-2009)
+-------------------
+
+- First release.
